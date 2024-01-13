@@ -12,8 +12,11 @@ This system aims to:
 - manage the enrollment process
 
 # Languages Used
-This System uses _HTML, _CSS, _JAVASCRIPT
+This System uses **HTML**,**CSS**, **JAVASCRIPT** as frontend while **PHP** and **MYSQLI** is used as backend for this system.
 
 # Developers
 Judel Bagisan
 Glydel Despojo
+
+# Words from Developers
+This system is not yet final.
