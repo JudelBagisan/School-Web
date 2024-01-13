@@ -10,3 +10,10 @@ This system aims to:
 - manage students
 - manage teachers or staffs
 - manage the enrollment process
+
+# Languages Used
+This System uses _HTML, _CSS, _JAVASCRIPT
+
+# Developers
+Judel Bagisan
+Glydel Despojo
