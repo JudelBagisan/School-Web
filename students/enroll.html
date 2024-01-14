@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "shortcut icon" type = "icon" href = "media/logo.png">
+    <title>Enroll Now</title>
+</head>
+<body>
+    <form action="connect.php" method="post">
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enroll.html">Enroll</a></li>
+        </ul>
+    </nav>
+    <div class="main-bg-container">
+        <div class="confirm-details-box" id="modal-box">
+            <div class="confirm-modal-content">
+                <h1 id="enroll-submit">Confirm Details</h1>
+                <p id="modal-details">Confirm the details below before submitting your information.</p>
+                <div id="button-close-modal" onclick="showConfirmModal()" >X</div>
+                <div class="table-confirm-details">
+                    <div class="row-table">
+                        <p id="fNameLbl">Firstname: </p>
+                    </div>
+                    <div class="row-table">
+                        <p id="mNameLbl">Middlename:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="lNameLbl">Lastname:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="sexLbl">Sex:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="birthdayLbl">Birthdate:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="courseLbl">Course:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="addressLbl">Address:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="emailLbl">Email:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="cNumberLbl">Contact Number:</p>
+                    </div>
+                    <div class="row-table">
+                        <p id="lrnLbl">LRN:</p>
+                    </div>
+                    <div class="row-table">
+                        <input type="submit" name="submit-btn" id="submit-to-database">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row1">
+            <img src="media/logo.png" id="logo-enroll">
+            <h1 id="enroll-text-header">Enroll now and<br>be part of our community!</h1>
+            <p id="enroll-slogan">Where our future matters and your future matters</p>
+            <div id="step-1" onclick="f()">Step 1</div>
+        </div>
+        <div class="row2" id="rowrowyourboat">
+            <div class="form-enroll">
+                <div id="enroll-title"><h1>Step 1</h1></div>
+                <div id="enroll-details"><p>Enter your details below and wait for the school confirmation email
+                    sent to you by the school attached with your enrollment account to proceed to step 2.
+                </p>
+            </div>
+                <div>
+                    <table id="table-form">
+                        <tr>
+                            <td style="text-align: left;">Firstname: </td>
+                            <td><input type="text" placeholder="Ex: Jose" required name="firstName" id="firstName" value=""></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Middlename: </td>
+                            <td><input type="text" placeholder="Ex: Mari" required name="midName" id="midName"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Lastname: </td>
+                            <td><input type="text" placeholder="Ex: Chan" required name="lastName" id="lastName"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Sex: </td>
+                            <td><select name="sex" id="sex" class="select-course" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Birthdate: </td>
+                            <td><input type="date" name="birthdate" id="birthdate"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Course: </td>
+                            <td><select name="course" class="select-course" id="course" required>
+                                <option value="BSIT">Bachelor of Science in Information Technology</option>
+                                <option value="BSED">Bachelor of Science in Secondary Education</option>
+                                <option value="BEED">Bachelor of Science in Elementary Education</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Address: </td>
+                            <td><input type="text" placeholder="Ex: Ecoland Drive, Samal, Philippines" name="address" id="address" required></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Email: </td>
+                            <td><input type="text" placeholder="Ex: josemarichan143@yehey.com" name="email" id="email" required></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Contact Number: </td>
+                            <td><input type="text" placeholder="Ex: 09091234567" name="cNumber" id="cNumber" required></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">LRN: </td>
+                            <td><input type="text" placeholder="Ex: 129543090010" name="lrn" id="lrn" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div id="submit-button-enroll" onclick="callValues()">Confirm</div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div id="close-button-enroll" onclick="f()">X</div></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div class="footer">
+        <div class="column1">
+            <h2 id="stanford-footer">STANFORD UNIVERSITY OF SAMAL</h2>
+        </div>
+        <div class="column">
+            <p id="title-footer">Contact Us</p>
+            <p id="details-footer">0909212199</p>
+            <p id="details-footer">stanforduniversity@yehey.com</p>
+        </div>
+        <div class="column">
+            <p id="title-footer">Contact Us</p>
+            <p id="details-footer">0909212199</p>
+            <p id="details-footer">stanforduniversity@yehey.com</p>
+        </div>
+        <div class="column3">
+            <p id="title-footer">Contact Us</p>
+            <p id="details-footer">0909212199</p>
+            <p id="details-footer">stanforduniversity@yehey.com</p>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var g = document.getElementById("rowrowyourboat");
+
+        function f() {
+        
+        var l = document.getElementById("modal-box").style.display = "none";
+        
+        if (g.style.transform === "translateY(-110%)" || g.style.transform === "") {
+            g.style.transform = "translateY(0)";
+        } else {
+            g.style.transform = "translateY(-110%)";
+        }
+        }
+
+        var buttonStep1 = document.getElementById("step-1");
+        var buttonX = document.getElementById("close-button-enroll");
+
+        if (buttonStep1) {
+        buttonStep1.addEventListener("click", f);
+        }
+
+        if(buttonX) {
+        buttonX.addEventListener("click", f)
+        }
+        });
+
+
+        function modalClose(){
+
+        var l = document.getElementById("modal-box");
+        var g = document.getElementById("rowrowyourboat");
+
+        if(l.style.display === "none" || l.style.display === "") {
+            l.style.display = "block";
+        }else {
+            l.style.display = "none";
+            g.style.transform = "translateY(-110%)";
+        }
+
+        }
+
+        function callValues(){
+
+            var l = document.getElementById("modal-box");
+
+            if(l.style.display === "none" || l.style.display === "") {
+                l.style.display = "block";
+            }else {
+                l.style.display = "none";
+            }
+
+
+            var fName = document.getElementById("firstName").value;
+            document.getElementById("fNameLbl").innerHTML = "<b>Firstname: " +fName;
+            var mName = document.getElementById("midName").value;
+            document.getElementById("mNameLbl").innerHTML = "<b>Middlename: " +mName;
+            var lName = document.getElementById("lastName").value;
+            document.getElementById("lNameLbl").innerHTML = "<b>Lastname: " +lName;
+            var sexLabel = document.getElementById("sex").value;
+            document.getElementById("sexLbl").innerHTML = "<b>Sex: " +sexLabel;
+            var birthdate = document.getElementById("birthdate").value;
+            document.getElementById("birthdayLbl").innerHTML = "<b>Birthday: " +birthdate;
+            var course = document.getElementById("course").value;
+            document.getElementById("courseLbl").innerHTML = "<b>Course: " +course;
+            var address = document.getElementById("address").value;
+            document.getElementById("addressLbl").innerHTML = "<b>Address: " +address;
+            var email = document.getElementById("email").value;
+            document.getElementById("emailLbl").innerHTML = "<b>Email: " +email;
+            var cNumber = document.getElementById("cNumber").value;
+            document.getElementById("cNumberLbl").innerHTML = "<b>Contact Number: " +cNumber;
+            var lrn = document.getElementById("lrn").value;
+            document.getElementById("lrnLbl").innerHTML = "<b>LRN: " +lrn;
+        }
+
+        function showConfirmModal() {
+            var l = document.getElementById("modal-box");
+
+            if(l.style.display === "none" || l.style.display === "") {
+                l.style.display = "block";
+            }else {
+                l.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

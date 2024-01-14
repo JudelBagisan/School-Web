@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    font-family: Open Sans;
+    overflow-x: hidden;
+}
+
+html {
+    height: 100vh;
+    background-color:rgb(235, 32, 32);
+    font-family: Open Sans;
+}
+
+.header {
+    display: flex;
+    background: url(media/logInImg.png);
+    min-height: 97.8003vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav ul {
+    z-index: 5;
+    width: 100vw;
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    background-color: #7d0a0a;
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    width: 7vw;
+    display: block;
+    padding: 4vh 7vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #bf3131;
+}
+
+.footer{
+    color: white;
+    position: relative;
+    width: 100vw;
+    height: 21vh;
+    background-color: #7d0a0a;
+}
+
+#stanford-footer{
+    margin-left: 3.5vw;
+    font-weight: bold;
+    width: 25vw;
+    font-size: 4vh;
+}
+
+#title-footer{
+    font-weight: bold;
+    margin-top: 5vh;
+}
+
+.column1 {
+    width: 40%;
+    height: 100%;
+    float: left;
+    font-size: 1.5vh;
+}
+
+.column{
+    margin-top: 4vh;
+    border-top: 3px solid white ;
+    width: 20%;
+    height: 10vh;
+    float: left;
+    font-size: 1.5vh;
+}
+
+.column3{
+    margin-top: 4vh;
+    border-top: 3px solid white ;
+    width: 10.5%;
+    height: 10vh;
+    float: left;
+    font-size: 1.5vh;
+}
+
+/*-------------------------------SIGN-IN PAGE STYLE---------------------- */
+#logo3 {
+    width: 24.50vh;
+    height:24.50vh;
+    display:block;
+    /* margin-top: -125vh;  */
+    margin-top: -80vh; 
+    margin-right: 10vw;
+}
+.logo-left {
+    justify-content: flex-end; 
+    display: flex;
+    margin-top: .5vh;
+}
+.sign-inCont { 
+    justify-content: flex-start; 
+    position: flex;
+    margin-top: -108vh;
+    animation: moveRight 1s ease;
+}
+
+.sign-in{
+    margin-top: 21.8409vh;
+    width: 78.0031vh;
+    height: 68.6427vh;
+    background-color: #FFF8;
+    text-align: center;
+    margin-left: 5vw;
+    border-radius: 6.2402vh;
+    margin-bottom: 5vh;
+}
+#sign-inLabel {
+    font-size: 4.6802vh;
+    font-weight: bold;
+    height: 4.6802vh;
+    color:white;
+    background-color: rgb(235, 32, 32);
+    padding:3.267vh;
+    opacity:1.5;
+    border-top-right-radius: 6.2402vh;
+    border-top-left-radius: 6.2402vh;
+}
+#sign-inLabel p {
+    margin-top:-0.7800vh;
+}
+
+/* id and pass */
+.inn{ 
+    height: 1.63vh;
+    margin-top: 7vh;
+}
+
+/* input[type=text], input[type=password]{ */
+    /* width: 62.4025vh;
+    height: 1.63vh;
+    padding: 2.450vh;
+    font-size: 2.450vh;
+    border-radius: 0.6240vh;
+    border: 0.0156vh solid grey;
+    text-align: center;     */
+/* } */
+.orTextt {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: -1vh;
+}
+.logInbutton {
+    font-size: 3vh;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(65, 61, 61); 
+}
+.logInbutton p{
+    margin-top: -3vh;
+}
+.sign-upButtonn {
+    background-color:rgb(235, 32, 32);
+    color: white;
+    border: none;
+    padding: 1.63vh 7.8003vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.614vh;
+    margin-top: 8vh;
+    font-weight: bold;
+    border-radius: 1.63vh;
+    
+}
+
+.sign-upButtonn:hover {
+    cursor: pointer;
+    background-color: #bf3131;
+}
+
+@keyframes moveLeft {
+    from {
+        margin-right: 100vw;
+        /* left: 0; */
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        margin-left: 100vw;
+        /* margin-left: 0; */
+    }
+    to {
+        margin-right: 0;
+    }
+}
+/*-----------------------------LOG-IN PAGE STYLE------------------------*/
+
+#logo2 {
+    width: 24.50vh;
+    height:24.50vh;
+    display:block;
+    margin-top: 17.6vh;
+    margin-left:10.486vw;
+}
+.logo-right {
+    justify-content: flex-start; 
+    display: flex;
+  }
+
+.log-inCont{
+    justify-content: flex-end; 
+    display: flex;
+    margin-top: -108vh;
+    animation: moveLeft 1s ease;
+}
+
+.log-in{
+    margin-top: 21.8409vh;
+    width: 78.0031vh;
+    height: 68.6427vh;
+    background-color: #FFF8;
+    text-align: center;
+    margin-right: 7.8003vh;
+    border-radius: 6.2402vh;
+    margin-bottom: 5vh;
+}
+
+#log-inLabel {
+    font-size: 4.6802vh;
+    font-weight: bold;
+    height: 4.6802vh;
+    color:rgb(235, 32, 32);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:3.267vh;
+    opacity:1.5;
+    border-top-right-radius: 6.2402vh;
+    border-top-left-radius: 6.2402vh;
+}
+
+#log-inLabel p {
+    margin-top:-0.7800vh;
+}
+/* id and pass */
+.in{ 
+    height: 1.63vh;
+    margin-top: 9.803vh;
+}
+
+input[type=text], input[type=password]{
+    width: 25vw;
+    height: 1.63vh;
+    padding: 2.450vh;
+    font-size: 2.450vh;
+    border-radius: 0.6240vh;
+    border: 0.0156vh solid grey;
+    text-align: center;    
+}
+
+.orText {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: -2vh;
+}
+.createAcct {
+    font-size: 3vh;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(65, 61, 61); 
+}
+
+.createAcct p{
+    margin-top: -3vh;
+}
+
+.sign-inButton {
+    background-color:rgb(235, 32, 32);
+    color: white;
+    border: none;
+    padding: 1.63vh 7.8003vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.614vh;
+    margin-top: 10.9204vh;
+    font-weight: bold;
+    border-radius: 1.63vh;   
+}
+
+.sign-inButton:hover{
+    cursor: pointer;
+    background-color: #bf3131;
+}
+
+#sign-in-link {
+    color: white;
+    text-decoration: none;
+}
+
