@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        :root {
+            --maroon: #7d0a0a;
+            --lightred: #bf3131;
+            --red: red;
+            --grey: #cccccc;
+        }
+        .search-container {
+            width: 25vw;
+            height: 6vh;
+            position: absolute;
+            right: 0;
+            background-color: var(--grey);
+            margin-top: 10vh;
+        }
+
+        input[type=search] {
+            padding: 1.5vh 3vh;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            border: 0;
+            outline: none;
+        }
+
+        #search-btn {
+            width: 7vw;
+            height: 5vh;
+            border: 0;
+            margin-left: -1vh;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: var(--red);
+            font-weight: bolder;
+            color: white;
+            font-size: 1rem;
+        }
+
+        #search-btn:hover {
+            border: 0;
+            cursor: pointer;
+            background-color: var(--lightred);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <form action="adminlogin.php">
+        <div class="login-container">
+            <div class="header">
+                <div class="title">Admin Login</div>
+            </div>
+            <div class="row first">
+                <input type="text" name="username" autocomplete="off" placeholder="Username" required/>
+            </div>
+            <div class="row">
+                <input type="password" name="password" placeholder="Password" required/>
+            </div>
+            <div class="row">
+                <input type="submit" value="Login" name="login">
+            </div>
+        </div>
+    </form>
+    <div class="search-container">
+        <input type="search" name="search-field" placeholder="Search Subject">
+        <button id="search-btn">Search</button>
+    </div>
+    </div>
+</body>
+</html>
