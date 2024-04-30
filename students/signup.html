@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="enroll.html">Enroll</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class = "logo-left" > 
+            <img id = "logo3" src="media/logo.png">
+        </div>
+
+        <div class="sign-inCont" id="sign-incont">
+            <form action="connect.php" method="post">
+                <div class="sign-in">
+                        <div  id="sign-inLabel"><p>SIGN IN</p></div>
+                        <div class="in"><input type="idd" placeholder="Student ID" name="username" id="username" required /></div>
+                        <div class="in"><input type="password" placeholder="Password" name="psw" id="psw" required /></div>
+                        <button class="sign-upButtonn">Sign up</button>
+                        <div class = "orTextt"> <p> or </p></div>
+                        <a href="logIn.html" class = "logInbutton"> <p> Log in</p></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="log-inCont" id="log-incont" style="display: none;">
+            <div class="log-in">
+                    <div  id="log-inLabel"><p>LOGIN</p></div>
+                    <div class="in"><input type="id" placeholder="Student ID" required></div>
+                    <div class="in"><input type="password" placeholder="Password" required></div>
+                    <button class="sign-inButton" type="Sign in">Sign in</button>
+                    <div class = "orText"> <p> or </p></div>
+                    <a href="signUp.html" class = "createAcct"> <p> Create Account </p></a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+   
+        <div class="footer">
+            <div class="column1">
+                <h2 id="stanford-footer">STANFORD UNIVERSITY OF SAMAL</h2>
+            </div>
+            <div class="column">
+                <p id="title-footer">Contact Us</p>
+                <p id="details-footer">0909212199</p>
+                <p id="details-footer">stanforduniversity@yehey.com</p>
+            </div>
+            <div class="column">
+                <p id="title-footer">Contact Us</p>
+                <p id="details-footer">0909212199</p>
+                <p id="details-footer">stanforduniversity@yehey.com</p>
+            </div>
+            <div class="column3">
+                <p id="title-footer">Contact Us</p>
+                <p id="details-footer">0909212199</p>
+                <p id="details-footer">stanforduniversity@yehey.com</p>
+            </div>
+        </div>
+    </body>
+</html>
+    
