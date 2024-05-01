@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studentPortal.css">
+    <link rel = "shortcut icon" type = "icon" href = "media/logo.png">
+    <title>Document</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body style="background-color:rgb(210, 197, 197);">
+
+<div class="navbar">
+<p>STANFORD UNIVERSITY OF SAMAL</p>
+
+<div class="dropdown">
+    <div class="dropbtn">
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <i class="ddown"></i> 
+    </div>
+
+    <div class="dropdown-content">
+    <a href="profile.php" class="icon"><img src="media/person.png" alt="Profile Icon"> Profile </a>
+    <a href="appointment.html" class="icon"><img src="media/appointment.png" alt="Appointment Icon"> Make an appointment </a>
+    <a href="" class="icon"><img src="media/grade.png" alt="Grade Icon"> Grades </a>
+    <a href="" class="icon"><img src="media/prospectus.png" alt="Prospectus Icon"> Prospectus </a>
+    </div>
+</div>
+
+<div class="dropdown2">
+    <div class="dropbtn2">  
+    <div class="name-icon"><img src="media/person.png" alt="Icon"></div>
+    <div class="name"> Student  </div>
+    <i class="ddown2"></i>
+    </div>
+    <div class="dropdown-content2">
+    <a href="home.html" class="icon2"><img src="media/logout.png" alt="Logout Icon"> Logout </a>
+    </div>
+</div>
+</div>
+<!-- ///////////////////////////// -->
+
+<div class="appoinment-container">
+    <div id="qrcode"></div>
+    <div id="appointment-Number"> </div>
+
+<div class="appointment-dropdown-Info">
+    <input type="date" name="appointmentdate" id="appointmentdate">
+
+    <select name="time" class="select-time" id="time" required>
+        <option>8:00AM - 10:00AM</option>
+        <option>10:00AM - 12:00PM</option>
+        <option>1:00PM - 3:00PM</option>
+        <option>3:00PM - 5:00PM</option>
+    </select>
+        <button onclick="okay()">Generate</button>
+</div>
+<script>
+    function okay() {
+        var randomString = Math.random().toString(36).substr(2, 8);
+        var qrcodeContainer = document.getElementById("qrcode");
+        var appointmentNumberContainer = document.getElementById("appointment-Number");
+        var selectedDate = document.getElementById("appointmentdate").value;
+        var selectedTime = document.getElementById("time").value;
+        var container = document.getElementById("container");
+        var qrShow = document.getElementById("qrcode2");
+
+        if (selectedDate === "") {
+        alert("Please select a date before generating the QR code.");
+        return;
+    }
+        qrcodeContainer.innerHTML = "";
+        var qrcode = new QRCode(qrcodeContainer, {
+            text: randomString,
+            width: 200,
+            height: 200,
+        });
+
+        appointmentNumberContainer.textContent = "Appointment No. " + randomString;
+        var containerDate = document.getElementById("container-date");
+        var containerTime = document.getElementById("container-time");
+
+        qrShow.innerHTML = "";
+        var qrcode2 = new QRCode(qrShow, {
+        text: randomString,
+        width: 150,
+        height: 150,
+    });
+    
+     ////////////////////////////////////////////////////////////////////
+    containerDate.textContent = "" + selectedDate;
+    containerTime.textContent = "" + selectedTime;
+    document.getElementById("container").style.display = "block";
+    var appointmentNumberDisplay = document.getElementById("container-appointment-number");
+    appointmentNumberDisplay.textContent = "Appointment No. " + randomString;
+
+    setTimeout(function () {
+        container.style.display = "none";
+    }, 3000);
+}
+</script>
+
+</div>
+        <div class="container" id="container">
+            <div class="prompt-Mess">
+                <h1>You have an active appointment on: </h1>
+                    <p id="qrcode2"></p>
+                    <p id="container-date"></p>
+                    <p id="container-time"></p>
+                    <p id="container-appointment-number"></p>
+                
+            </div>
+        </div>
+
+
+</body>
+</html>
+
